@@ -15,7 +15,7 @@ Sigue estos pasos para instalar y ejecutar la aplicación:
 
 1. Clona el repositorio:
    ```
-   git clone https://github.com/tu-usuario/emotion-detection-app.git
+   git clone https://github.com/mspadron/ProyectoDeficitAtencion.git
    cd emotion-detection-app
    ```
 
