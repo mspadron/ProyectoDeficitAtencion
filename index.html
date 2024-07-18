@@ -26,6 +26,23 @@
     <div id="infoContainer">
         <p id="age">Age: N/A</p>
         <p id="gender">Gender: N/A</p>
+        <h3>Distraido y atención</h3>
+        <p id="bored">Bored: N/A</p>        
+        <p id="attentive">Attentive: N/A</p>
+        <h3>Inquietudes</h3>
+        <p id="tense">Tense: N/A</p>
+        <p id="uncomfortable">Uncomfortable: N/A</p>
+        <h3>Cambios de humor</h3>
+        <p id="happy">Happy: N/A</p>
+        <p id="sad">Sad: N/A</p>
+        <p id="frustrated">Frustrated: N/A</p>
+        <p id="angry">Angry: N/A</p>
+        <h3>Ansiedad</h3>
+        <p id="anxious">Anxious: N/A</p>
+        <h3>Confianza</h3>
+        <p id="confident">Confident: N/A</p>
+        <p id="selfConfident">Self Confident: N/A</p>
+
     </div>
 
     <script src="https://sdk.morphcast.com/mphtools/v1.1/mphtools.js" data-config="cameraPrivacyPopup, compatibilityUI, compatibilityAutoCheck"></script>
@@ -80,15 +97,70 @@
             if (detail) {
                 if (detail.age && detail.age.avg !== undefined) {
                     document.getElementById('age').textContent = `Age: ${detail.age.avg}`;
-                    console.log(`Age: ${detail.age.avg}`);
                 }
 
                 if (detail.gender_mostConfident && detail.gender_mostConfident.distribution) {
                     const genderDistribution = detail.gender_mostConfident.distribution;
                     const gender = Object.keys(genderDistribution)[0]; // Assumes there's only one key
                     document.getElementById('gender').textContent = `Gender: ${gender}`;
-                    console.log(`Gender: ${gender}`);
                 }
+
+                //bored
+                if (detail.affects38_Bored && detail.affects38_Bored.avg !== undefined) {
+                    document.getElementById('bored').textContent = `Bored: ${detail.affects38_Bored.avg}`;
+                }
+
+                //attentive
+                if (detail.affects98_Attentive && detail.affects98_Attentive.avg !== undefined) {
+                    document.getElementById('attentive').textContent = `Attentive: ${detail.affects98_Attentive.avg}`;
+                }
+
+                //tense
+                if (detail.affects98_Tense && detail.affects98_Tense.avg !== undefined) {
+                    document.getElementById('tense').textContent = `Tense: ${detail.affects98_Tense.avg}`;
+                }
+
+                //uncomfortable
+                if (detail.affects38_Uncomfortable && detail.affects38_Uncomfortable.avg !== undefined) {
+                    document.getElementById('uncomfortable').textContent = `Uncomfortable: ${detail.affects38_Uncomfortable.avg}`;
+                }
+
+                //happy
+                if (detail.affects38_Happy && detail.affects38_Happy.avg !== undefined) {
+                    document.getElementById('happy').textContent = `Happy: ${detail.affects38_Happy.avg}`;
+                }
+
+                //sad
+                if (detail.affects38_Sad && detail.affects38_Sad.avg !== undefined) {
+                    document.getElementById('sad').textContent = `Sad: ${detail.affects38_Sad.avg}`;
+                }
+
+                //frustrated
+                if (detail.affects38_Frustrated && detail.affects38_Frustrated.avg !== undefined) {
+                    document.getElementById('frustrated').textContent = `Frustrated: ${detail.affects38_Frustrated.avg}`;
+                }
+
+                //angry
+                if (detail.affects38_Angry && detail.affects38_Angry.avg !== undefined) {
+                    document.getElementById('angry').textContent = `Angry: ${detail.affects38_Angry.avg}`;
+                }
+
+                //anxious
+                if (detail.affects38_Anxious && detail.affects38_Anxious.avg !== undefined) {
+                    document.getElementById('anxious').textContent = `Anxious: ${detail.affects38_Anxious.avg}`;
+                }
+
+                //confident
+                if (detail.affects98_Confident && detail.affects98_Confident.avg !== undefined) {
+                    document.getElementById('confident').textContent = `Confident: ${detail.affects98_Confident.avg}`;
+                }
+
+                //selfConfident
+                if (detail.affects98_Selfconfident && detail.affects98_Selfconfident.avg !== undefined) {
+                    document.getElementById('selfConfident').textContent = `Self Confident: ${detail.affects98_Selfconfident.avg}`;
+                }
+
+
             }
         });
         //Atención
