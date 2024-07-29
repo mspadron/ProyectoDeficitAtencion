@@ -76,14 +76,11 @@ npm run dev
 La aplicación estará disponible en http://localhost:5173.
 
 ## Uso
-1. Iniciar Grabación
+### 1. Iniciar Grabación
+En la aplicación frontend, haz clic en el botón "Iniciar Grabación" para comenzar a capturar datos de emociones.
 
-    En la aplicación frontend, haz clic en el botón "Iniciar Grabación" para comenzar a capturar datos de emociones.
+### 2. Finalizar Grabación
+Haz clic en el botón "Finalizar Grabación" para detener la captura y enviar los datos al servidor.
 
-2. Finalizar Grabación
-    
-    Haz clic en el botón "Finalizar Grabación" para detener la captura y enviar los datos al servidor.
-
-3. Ver Datos
-    
-    Los datos serán enviados al servidor y almacenados en MongoDB.
+### 3. Ver Datos
+Los datos serán enviados al servidor y almacenados en MongoDB.
