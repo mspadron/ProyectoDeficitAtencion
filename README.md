@@ -75,7 +75,7 @@ npm run dev
 
 La aplicación estará disponible en http://localhost:5173.
 
-### Uso
+## Uso
 1. Iniciar Grabación
 
     En la aplicación frontend, haz clic en el botón "Iniciar Grabación" para comenzar a capturar datos de emociones.
