@@ -1,8 +1,13 @@
 // components/RecordingControl.js
 import React, { useState, useEffect } from 'react';
 import useApiService from '../hooks/useApiService';
+import useMorphCast from '../hooks/useMorphCast';
 
-const RecordingControl = ({ emotionData }) => {
+
+const RecordingControl = () => {
+
+  const emotionData = useMorphCast();
+
   const [isRecording, setIsRecording] = useState(false);
   const [recordedData, setRecordedData] = useState([]);
   const { sendData, isLoading, error } = useApiService();
@@ -52,7 +57,7 @@ const RecordingControl = ({ emotionData }) => {
     <div className="mt-8 text-center">
       <button
         onClick={toggleRecording}
-        className={`px-6 py-2 rounded-lg ${isRecording ? 'bg-red-500' : 'bg-blue-500'} text-white`}
+        className={`absolute top-4 right-4 px-6 py-2 rounded-lg ${isRecording ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'} text-white`}
         disabled={isLoading}
       >
         {isRecording ? 'Detener Grabación' : 'Iniciar Grabación'}
