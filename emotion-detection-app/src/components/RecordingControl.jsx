@@ -57,7 +57,7 @@ const RecordingControl = () => {
     <div className="mt-8 text-center">
       <button
         onClick={toggleRecording}
-        className={`absolute top-4 right-4 px-6 py-2 rounded-lg ${isRecording ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'} text-white`}
+        className={`absolute top-20 right-4 px-6 py-2 rounded-lg ${isRecording ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'} text-white`}
         disabled={isLoading}
       >
         {isRecording ? 'Detener Grabación' : 'Iniciar Grabación'}
