@@ -16,7 +16,7 @@ const Camera = () => {
 
   return (
     <div className="relative w-3/12 max-w-2xl mx-auto border-4 border-blue-500 rounded-lg overflow-hidden shadow-lg">
-      <video ref={videoRef} autoPlay muted className="w-full h-auto" />
+      <video ref={videoRef} autoPlay muted className="w-full h-auto hidden" />
     </div>
   );
 };
