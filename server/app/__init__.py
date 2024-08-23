@@ -10,6 +10,6 @@ CORS(app)  # Habilita CORS para todas las rutas
 
 # Configuración de MongoDB
 client = MongoClient("mongodb://localhost:27017/")
-db = client.test_database
+db = client.DeficitAtencionDB
 
 from app import routes

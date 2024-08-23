@@ -1,5 +1,10 @@
 data_model = {
     "testName": str,
+    "nombre_paciente": str,
+    "cedula_paciente": str,
+    "edad_paciente": int,
+    "tiempo_test_segundos": int,
+    "fecha_test": str,
     "bored": list,
     "attentive": list,
     "tense": list,
